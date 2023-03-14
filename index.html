@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="estiloscambio" rel="stylesheet" href="css/styles.css">
+    <title>GENERADOR DE MEMES</title>
+</head>
+<body id="cuerpo">
+    <div class="mderecha" id="mderecha">
+        <div class="contenedor">
+            <div class="content">
+                <h1>Editor de imagen</h1>
+                <div class="partes">
+                    <p>Cambiar color:</p> 
+                    <div>
+                        <p>Color Izquierda</p>
+                        <input type="color" id="color" value="#Add8e6">
+                    </div>
+                    <input type="button" id="boton" name="color" value="Colorear" onclick="FondoColor();">
+                </div>
+                <div class="partes">
+                    <div id="inimagenes">
+                        <div>
+                            <img src="img/A0.jpg" class="img" onclick="foto('A0');">
+                            <img src="img/A1.jpg" class="img" onclick="foto('A1');">
+                        </div>
+                        <div>
+                            <img src="img/A2.jpg" class="img" onclick="foto('A2');">
+                            <img src="img/A3.jpg" class="img" onclick="foto('A3');">
+                        </div> 
+                    </div>  
+                </div>
+            </div>
+            <div class="content">
+                <div class="partes" >
+                    <div>
+                        <p>Texto Arriba:</p> 
+                        <input type="text" id="arriba">
+                        <input type="button" id="boton" name="arriba" value="Escribir" onclick="posicion('arriba');"><br>
+                    </div> 
+                    <div>
+                        <p>Texto Abajo: </p> 
+                        <input type="text" id="abajo">
+                        <input type="button" id="boton" name="abajo" value="Escribir" onclick="posicion('abajo');">    
+                    </div>
+                </div>
+    
+                <div class="partes">
+                    <div>
+                        <p>Tipo de letra:</p>
+                        <select id="opcionletra">
+                            <option value="fuente1">letra 1</option>
+                            <option value="fuente2">letra 2</option>
+                            <option value="fuente3">letra 3</option>
+                        </select>
+                    </div>
+                    <div >
+                        <p>Color de letra:</p>
+                        <input type="color" id="colorletra">    
+                        <input type="button" onclick="CambioColor()" value="Colorear">
+                    </div>
+                    <div> 
+                        <p>Tamaño de letra:</p>
+                        <input type="range" id="tamano" name="tamano" min="20" max="62"> 
+                        <input type="button" id="boton" name="color" value="Cambiar Tamaño" onclick="CambiarTamano();">
+                    </div> 
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <div class="mizquierda" id="mizquierda">
+        <div>
+            <h3 id="autorzona" style="text-align: left;"></h3>
+            <h1 id="texto1" class="n"></h1>
+            <img src="img/A0.jpg" id="imagen">
+            <h1 id="texto2"></h1>
+        </div>
+    </div>
+    <script src="js/codigo.js"></script>
+</body>
+</html>
